@@ -1,0 +1,95 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static "image/bg11.jpg" %}'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.c1{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.c2{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.c3 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* header {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    /* padding: 10px 0;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); Adds a blur effect to the background
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust based on your logo size */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color:white;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

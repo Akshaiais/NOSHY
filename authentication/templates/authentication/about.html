@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url("{% static 'image/bg13.jpg' %}");
+        }
+
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid c1">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'image/logo.png' %}" alt="Logo" height="50">
+                    NOSHY
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'authentication:index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'authentication:about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'authentication:services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'authentication:contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ml-auto">
+                    <a class="btn btn-light" href="">Sign in</a>
+                </div>
+            </div>
+        </nav><br>
+
+        
+
+    </header>
+    <div class="container-fluid c2">
+        
+
+        <main>
+            <br><br>
+            <h1 class="mt-4 mb-4 text-center">Online Food Delivery Web Application</h1>
+            <br><br>
+            <div class="container c5">
+                <h5>For Customers:</h5><br>
+                <h6>
+                    <ul>User-Friendly Interface:
+                        <ol>Home Page: Browse a curated list of local restaurants and popular dishes. Use search filters to find specific cuisines, dietary options, or restaurant ratings.</ol>
+                        <ol>Restaurant Pages: View detailed menus, photos of dishes, and customer reviews. Check out special offers and promotions.</ol>
+                        <ol>Order Tracking: Real-time updates on order status from preparation to delivery. See the estimated delivery time and track the delivery driver on a map.</ol>
+                    </ul><br>
+                    <ul>Seamless Ordering Experience:
+                        <ol>Easy Navigation: Add items to the cart with a single click and customize orders according to your preferences.</ol>
+                        <ol>Multiple Payment Options: Pay via credit/debit cards, digital wallets, or cash on delivery. Secure payment gateways ensure your transactions are safe.</ol>
+                        <ol>Personalized Recommendations: Get suggestions based on your previous orders, browsing history, and popular choices.</ol>
+                    </ul><br>
+                    <ul>Account Management:
+                        <ol>Profile Management: Update personal information, delivery addresses, and payment methods.</ol>
+                        <ol>Order History: View past orders, re-order your favorite meals, and keep track of your spending.</ol>
+                        <ol>Loyalty Programs: Earn points or discounts with frequent orders and special promotions.</ol>
+                    </ul><br>
+                </h6><br>
+                <h5>For Sellers (Restaurants):</h5><br>
+                <h6>
+                    <ul>Restaurant Dashboard:
+                        <ol>Order Management: View and manage incoming orders in real-time. Update order statuses and communicate with customers if necessary.</ol>
+                        <ol>Menu Management: Easily add, update, or remove menu items. Set prices, add descriptions, and upload images of dishes.</ol>
+                        <ol>Analytics: Access detailed reports on sales, order trends, and customer feedback to make data-driven decisions.</ol>
+                    </ul><br>
+                    <ul>Promotional Tools:
+                        <ol>Special Offers: Create and manage promotions, discounts, and limited-time offers to attract customers.</ol>
+                        <ol>Advertising: Promote your restaurant through featured listings and sponsored ads on the platform.</ol>
+                    </ul><br>
+                    <ul>Customer Engagement:
+                        <ol>Reviews and Feedback: Respond to customer reviews and feedback to improve service and build a positive reputation.</ol>
+                        <ol>Customer Insights: Gain insights into customer preferences and behavior to tailor your offerings and marketing strategies.</ol>
+                    </ul><br>
+                    <ul>Support and Integration:
+                        <ol>Customer Support: Access dedicated support for any technical issues or questions.</ol>
+                        <ol>Integration: Connect with POS systems, inventory management tools, and delivery logistics to streamline operations.</ol>
+                    </ul><br>
+                </h6><br>
+            </div><br>
+            
+        </main>
+
+        
+        
+    </div>
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Food Delivery App</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
