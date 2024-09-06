@@ -97,7 +97,7 @@
                         <div class="card bg-transparent zoom-effect" style="width: 7rem; height: 120px;" >
                             <img class="card-img-top" src="{{category.cimage.url}}" alt="Card image cap" height="70px" width="7rem">
                             <div class="card-body">
-                              <a class="btn btn-light b1" href="">{{category.cname}}</a>
+                              <a class="btn btn-light b1" href="{% url 'customer:category' category.id %}">{{category.cname}}</a>
                             </div>
                         </div> 
                     </div>

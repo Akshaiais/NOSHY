@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,6 +77,7 @@ WSGI_APPLICATION = 'noshy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+'''
 
 DATABASES = {
     'default': {
@@ -87,7 +89,13 @@ DATABASES = {
         'HOST':'127.0.0.1'
     }
 }
+'''
+import dj_database_url 
 
+DATABASES = {
+    'default': dj_database_url.parse('postgresql://noshydb_sepx_user:Z7wAZVJQhKIo7PohVAUN0HODRiroEwqB@dpg-crbv6b2j1k6c738fdr30-a.oregon-postgres.render.com/noshydb_sepx')
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -127,6 +135,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'customer/static')
 ]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -3,6 +3,9 @@ from.models import *
 from django.http import HttpResponse
 from authentication.models import*
 from seller.models import*
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
 def cdash(request):
      if 'customer' in request.session:
@@ -54,11 +57,13 @@ def category(request,category_id):
      category=Category.objects.get(id=category_id)
      product=Product.objects.filter(category=category)
      all_category=Category.objects.all()
+     
      context={
           'category':category,
           'product':product,
           'all_category':all_category,
      }
+     
      return render(request,'customer/category.html',context)
 
 def catsearch(request):
